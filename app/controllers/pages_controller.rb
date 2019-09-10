@@ -71,4 +71,32 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def supporter_mozilla
+    @supporter_name = "Mozilla"
+    @supporter_logo = "mozilla-white.png"
+    @supporter_website_url = "https://foundation.mozilla.org"
+
+    @supporter_support_details = ParseMarkdown.(%q{
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    }.strip)
+
+    @supporter_about = ParseMarkdown.(%q{
+      Mozilla is a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good.
+    }.strip)
+
+    render action: 'supporter'
+  end
+
+  def supporter_sloan
+    @supporter_name = "The Sloan Foundation"
+    @supporter_logo = "sloan-white.png"
+    render action: 'supporter'
+  end
+
+  def supporter_thalamus
+    @supporter_name = "Thalamus"
+    @supporter_logo = "thalamus-white.png"
+    render action: 'supporter'
+  end
 end

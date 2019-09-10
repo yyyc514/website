@@ -1,0 +1,37 @@
+@import 'variables';
+@import 'mixins';
+
+$purple: #8A89C0;
+
+body.namespace-none.controller-pages.action-supporters {
+    footer {
+        margin-top:0px;
+    }
+}
+
+#supporter-page {
+    .organisation-top-banner-section {
+        img {
+            height:30px;
+            display:block;
+            margin-top:5px;
+        }
+    }
+    .details-section {
+        padding:50px 0;
+        .info {
+            width:60%;
+        }
+        h2 {
+            font-weight:$fw-black;
+            @include font-size(23, 27);
+            margin-bottom:10px;
+        }
+        p {
+            @include font-size(16, 22)
+        }
+        p+h2 {
+            margin-top:30px;
+        }
+    }
+}

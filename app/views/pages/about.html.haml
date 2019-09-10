@@ -1,11 +1,14 @@
+=stylesheet_link_tag '//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap'
+
 #about-page.lo-organisation-page
   =render "organisation_menu", selected: "about"
 
-  %section.top-banner-section
+  %section.organisation-top-banner-section
     .lo-container
-      %h1
-        %strong We are a not-for-profit organisation
-        providing opportunity through programming education
+      .inner
+        %h1
+          %strong We are a not-for-profit organisation
+          providing opportunity through programming education
 
   %section.vision-section
     .lo-container
@@ -30,7 +33,7 @@
         .text
           %i.fa.fa-quote-left
           .copy Exercism is a great gift to the programming community and I hope when I finally achieve my Rock Star status I won’t forget to give back and do my own bit of mentoring.
-        .byline Dr Moxie
+        .byline - Dr Moxie
 
   %section.stats-section
     .lo-container
@@ -52,12 +55,12 @@
           .label mentors in 29 timezones
         .hex
           .value 53k
-          .label Git commits
+          .label git commits
         .hex
           .value 3.6k
           .label contributions
 
-      %p Created by volunteers. Grown purely through word of mouth
+      %p Created by volunteers. Grown purely through word of mouth.
 
   %section.supporters-section
     .lo-container
@@ -66,12 +69,12 @@
         %p Exercism relies on both the generosity of individuals with their time, and the generosity of organisations to financially support us. 
         %p While much of Exercism is run by our volunteer community, the website and core infrastructure are managed by a full-time team. We also undertake specific larger projects, such as the development of our automated analyzers, which require a committed team working more intensely on something over a fixed period of time. 
         %p In order to fund this core team and these products we rely on grant funding from companies or organisation that wish to contribute to our vision of helping providing free programming education for everyone.
-        =link_to "Learn more about how you can support us", supporters_page_path, class: 'pure-button'
+        =link_to "Learn more about how you can support us ⟶", supporters_page_path, class: 'pure-button'
       .current
         %h3 Current supporters
-        =link_to image_tag("supporter-logos/sloan.png"), "#", class: 'logo'
-        =link_to image_tag("supporter-logos/mozilla.png"), "#", class: 'logo'
-        =link_to image_tag("supporter-logos/thalamus.png"), "#", class: 'logo'
+        =link_to image_tag("supporter-logos/sloan-black.png"), supporter_sloan_page_path, class: 'logo'
+        =link_to image_tag("supporter-logos/mozilla-black.png"), supporter_mozilla_page_path, class: 'logo'
+        =link_to image_tag("supporter-logos/thalamus-black.png"), supporter_thalamus_page_path, class: 'logo'
         =link_to "Your Organisation Here", "#", class: "your-organisation-here"
 
   %section.methodology-section
