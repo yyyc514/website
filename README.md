@@ -52,6 +52,11 @@ You also need to create a local version of secrets.yml:
 cp config/secrets.yml.example config/secrets.yml
 ```
 
+Before running `exercism:setup` you'll first need to edit `secrets.yml` to add your own GitHub OAuth
+details.  You'll need to change `github_key` and `github_secret`.  This will avoid hitting rate
+limiting during the setup process.  See **OAuth setup** below for details on how to setup an actual
+OAuth development application with GitHub.
+
 Then we've put a rake task together that should set everything else up. You can run it like this:
 
 ```bash
